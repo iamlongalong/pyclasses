@@ -87,8 +87,7 @@ def draw_class_dependency_graph(dependencies, abstract_classes, class_docstrings
         docstring = class_docstrings.get(cls, "No description available.")
 
         if cls in abstract_classes:
-            label = f"""<{cls}<BR/><FONT POINT-SIZE='10'>Abstract Methods:<BR ALIGN='LEFT'/>
-           {'<BR ALIGN=\'LEFT\'/>'.join(abstract_classes[cls])}</FONT>>"""
+            label = "<{cls}<BR/><FONT POINT-SIZE='10'>Abstract Methods:<BR ALIGN='LEFT'/>".format(cls=cls) + "<BR ALIGN='LEFT'/>".join(abstract_classes[cls]) + "</FONT>>"
             graph.add_node(pydot.Node(cls_quoted, style="filled", fillcolor="lightgrey", label=label, tooltip=docstring, shape="box"))
         else:
             label = f"<{cls}>"
