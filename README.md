@@ -18,3 +18,6 @@ pyclasses /path/to/project file.svg [classname]
 python3 setup.py sdist
 twine upload dist/*
 ```
+
+# info
+其实用 `pyreverse -o svg -A -p langchain . ` 就挺好的
