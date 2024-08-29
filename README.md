@@ -21,3 +21,4 @@ twine upload dist/*
 
 # info
 其实用 `pyreverse -o svg -A -p langchain . ` 就挺好的
+- 安装 `pip install pylint`
